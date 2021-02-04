@@ -78,7 +78,7 @@ $ git clone https://github.com/LimoVincent/full-stack-open-2020-part4
 #Dependacies
 axios, bootstrap, react, react - bootstrap,
 # Access
-$ cd fullstack_open_2020_part3
+$ cd full-stack-open-2020-part4
 $ cd frontend
 $ npm start
 
@@ -94,7 +94,7 @@ $ npm start
 #Dependacies
 cors dotenv, express, mongoose, mongoose-unique-validator, morgan , eslint, nodemon, http
 # Access
-$ cd fullstack_open_2020_part3
+$ cd full-stack-open-2020-part4
 $ cd backend
 $ npm run dev
 
