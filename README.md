@@ -1,5 +1,3 @@
-
-
 <h1 align="center">Full Stack Open 2020 Part4</h1>
 
 <p align="center">
@@ -12,10 +10,6 @@
   <img alt="License" src="https://img.shields.io/github/license/VincentLimo/full-stack-open-2020-part4?color=56BEB8">
 
 </p>
-
-
-
-
 
 <hr> -->
 
@@ -31,15 +25,15 @@
 
 <br>
 <div align="center" id="top"> 
- 
 
-  <a href="">Demo</a>
+
+<a href="https://limitless-taiga-88323.herokuapp.com/">Demo</a>
+
 </div>
 
-## :dart: About ##
+## :dart: About
 
 [Part4](https://fullstackopen.com/en/part4) of React, Redux, Node.js, MongoDB, GraphQL and TypeScript With Helsinki University, Department of Computer Science. Frontend was bootstrap with createreactApp
-
 
 <!-- ## :sparkles: Features ##
 
@@ -47,7 +41,7 @@
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3; -->
 
-## :rocket: Technologies ##
+## :rocket: Technologies
 
 The following tools were used in this project:
 
@@ -57,12 +51,11 @@ The following tools were used in this project:
 - [MangoDB](https://www.mongodb.com/cloud/atlas)
   - [Mongoosejs](https://mongoosejs.com/)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting ##
-
+## :checkered_flag: Starting
 
 ```bash
 
@@ -103,10 +96,10 @@ $ npm run dev
 # check for example;  <http://localhost:3001/api/blogs>
 
 ```
-## :memo: License ##
+
+## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
 
 Made with :heart: by <a href="https://github.com/VincentLimo" target="_blank">Vincent Limo</a>
 
