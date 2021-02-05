@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { getAll, create, update, deleted } from './service'
 import Blog from './components/Blog'
 const App = () => {
-  
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const App = () => {
   //     })
   //     .catch((error) => null)
   // }
-
+  console.log(blogs)
   return (
     <div className='container-fluid w-100 h-100 m-0 p-0 bg-white'>
       <div
