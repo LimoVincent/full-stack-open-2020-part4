@@ -8,8 +8,8 @@ const blogSchema = new mongoose.Schema({
     required: true,
     default: 'https://github.com/LimoVincent',
   },
-  likes: { type: Number, default: 0 },
-  date: { type: Date, default: new Date().toLocaleString('us') },
+  likes: { type: Number, default: Math.floor(Math.random() * 100) },
+  date: { type: Date, default: new Date() },
 })
 
 blogSchema.set('toJSON', {
