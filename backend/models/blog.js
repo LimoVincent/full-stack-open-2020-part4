@@ -2,13 +2,12 @@ const mongoose = require('mongoose')
 
 const blogSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  author: { type: String, required: true, default: 'Vincent Limo' },
+  author: { type: String },
   url: {
     type: String,
     required: true,
-    default: 'https://github.com/LimoVincent',
   },
-  likes: { type: Number, default: Math.floor(Math.random() * 100) },
+  likes: { type: Number, default: 0 },
   date: { type: Date, default: new Date() },
 })
 
