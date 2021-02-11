@@ -69,8 +69,7 @@ blogRouter.delete('/:id', async (req, res) => {
     return res.status(401).json({ error: 'Token missing or invalidd' })
   }
   if (blog.user.toString() === user.id.toString()) {
-    // await Blog.findByIdAndRemove(req.params.id)
-    console.log('deleted')
+    await Blog.findByIdAndRemove(req.params.id)
     res.status(204).end()
   } else {
     res.status(401).json({ error: 'Unauthorized' })
