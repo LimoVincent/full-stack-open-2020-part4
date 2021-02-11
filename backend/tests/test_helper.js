@@ -38,10 +38,41 @@ const innitialBlogs = [
     v: 0,
   },
 ]
+const innitialUsers = [
+  {
+    notes: [],
+    username: 'Vincent1',
+    name: 'Vincent1',
+    id: '601fd65654b92231586be047',
+  },
+  {
+    notes: [],
+    username: 'Vincent2',
+    name: 'Vincent2',
+    id: '601fd68354b92231586be048',
+  },
+  {
+    notes: [],
+    username: 'Vincent3',
+    name: 'Vincent3',
+    id: '601fd6a354b92231586be049',
+  },
+  {
+    notes: [],
+    username: 'Vincent4',
+    name: 'Vincent4',
+    id: '601fd9249cc1b7119c45f7e7',
+  },
+]
 
 const blogInDb = async () => {
   const blogs = await Blog.find({})
   return blogs.map((blog) => blog.toJSON())
 }
 
-module.exports = { innitialBlogs, blogInDb }
+const usersInDb = async () => {
+  const users = await Blog.find({})
+  return users.map((user) => user.toJSON())
+}
+
+module.exports = { innitialBlogs, blogInDb, usersInDb, innitialUsers }

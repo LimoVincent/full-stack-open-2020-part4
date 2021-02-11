@@ -1,0 +1,21 @@
+post http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+ "username": "Vincent2",
+ "password" : "Vincent2"
+}
+
+
+###
+post http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlZpbmNlbnQyIiwiaWQiOiI2MDFmZWVmMmE0MjYyZTQ1NzAwZWVmMjMiLCJpYXQiOjE2MTI4NTQzMjR9.cohh9PDdJ32-KvUFg-NLr_oj2YjSvrILwl-apD_jMKg
+
+  {
+  "author": "Vincent2",
+  "url": "https://github.com/LimoVincent",
+  "likes": 12,
+  "title": "Post 4",
+  "userId":  "601feef2a4262e45700eef23"
+   }
