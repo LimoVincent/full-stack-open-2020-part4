@@ -50,6 +50,7 @@ describe('HTTP POST request to the /api/blogs', () => {
     }
     await api
       .post('/api/blogs')
+      .set('Authorization', `Bearer ${helper.token}`)
       .send(newblog)
       .expect(201)
       .expect('Content-Type', /application\/json/)
@@ -64,7 +65,11 @@ describe('HTTP POST request to the /api/blogs', () => {
       author: 'vincent Limo',
       likes: 12,
     }
-    await api.post('/api/blogs').send(newblog).expect(404)
+    await api
+      .post('/api/blogs')
+      .set('Authorization', `Bearer ${helper.token}`)
+      .send(newblog)
+      .expect(404)
     const blogsEnd = await helper.blogInDb()
     expect(blogsEnd).toHaveLength(helper.innitialBlogs.length)
   })
@@ -75,19 +80,23 @@ describe('HTTP POST request to the /api/blogs', () => {
       author: 'Vincent K',
       url: 'https://github.com/LimoVincent',
     }
-    await api.post('/api/blogs').send(newblog)
+    await api
+      .post('/api/blogs')
+      .set('Authorization', `Bearer ${helper.token}`)
+      .send(newblog)
+
     const blogsEnd = await helper.blogInDb()
     expect(blogsEnd[helper.innitialBlogs.length].likes).toBe(0)
   })
-})
-
-describe('HTTP DELETE request to the /api/blogs', () => {
-  test('succeeds with status code 204', async () => {
-    const blogsBefore = await helper.blogInDb()
-    const blogToDelete = blogsBefore[1]
-    await api.delete(`/api/blogs/${blogToDelete.id}`).expect(204)
+  test('adding a blog fails with 401 Unauthorized', async () => {
+    const newblog = {
+      title: 'Post random',
+      author: 'Vincent K',
+      url: 'https://github.com/LimoVincent',
+    }
+    await api.post('/api/blogs').send(newblog)
     const blogsEnd = await helper.blogInDb()
-    expect(blogsEnd).toHaveLength(helper.innitialBlogs.length - 1)
+    expect(blogsEnd[helper.innitialBlogs.length].likes).toBe(0)
   })
 })
 
